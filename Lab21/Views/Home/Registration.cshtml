@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Registration";
+}
+
+<h2>Please fill the form to register!</h2>
+
+<form action="/Home/AddUser" method="post">
+    <label class="contol-label">First Name</label> <input id="firstName" type="text" name="FirstName" class="form-control" />
+    <label class="control-label">Last Name</label> <input id="lastName" type="text" name="LastName" class="form-control" />
+    <label class="control-label">Email</label> <input id="email" type="email" name="emailaddress" class="form-control" />
+    <label class="control-label">Phone Number</label> <input id="phoneNumber" type="text" name="PhoneNumber" class="form-control" />
+    <label class="control-lable">Password</label> <input id="password" type="password" name="Password" class="form-control" />
+    <input type="submit" value="Register" class="btn-default" />
+</form>
