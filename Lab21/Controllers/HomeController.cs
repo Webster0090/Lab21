@@ -35,10 +35,13 @@ namespace Lab21.Controllers
         {
             return View();
         }
-        public ActionResult AddUser(Register newUser)
+        public ActionResult AddUser(User newUser)
         {
             if (ModelState.IsValid)
             {
+                CoffeeShopDBEntities ORM = new CoffeeShopDBEntities();
+                ORM.Users.Add(newUser);
+                ORM.SaveChanges();
                 ViewBag.WelcomeMessage = $"Welcome {newUser.FirstName}!";
                 return View("Summary");
             }
