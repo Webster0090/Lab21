@@ -3,7 +3,28 @@
 }
 
 <h1>Welcome to the GC Coffee Shop!</h1>
+<link href="~/Content/StyleSheet1.css" rel="stylesheet" />
 
 <h2>
     <a href="/Home/Registration">Register</a>
 </h2>
+
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <th>Item Name</th>
+        <th>Description</th>
+        <th>Quantity</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var item in ViewBag.Test)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Description</td>
+            <td>@item.Quantity</td>
+            <td>@item.Price</td>
+        </tr>
+    }
+</table>
+
+

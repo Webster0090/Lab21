@@ -157,6 +157,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -175,6 +176,24 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CoffeeShopDBModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Item.cs">
+      <DependentUpon>ItemsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ItemsModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemsModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ItemsModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ItemsModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ItemsModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\User.cs">
       <DependentUpon>CoffeeShopDBModel.tt</DependentUpon>
     </Compile>
@@ -185,7 +204,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Controllers\StyleSheet1.css" />
+    <Content Include="Content\StyleSheet1.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -200,6 +219,16 @@
       <DependentUpon>CoffeeShopDBModel.edmx</DependentUpon>
       <LastGenOutput>CoffeeShopDBModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Models\ItemsModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ItemsModel.edmx</DependentUpon>
+      <LastGenOutput>ItemsModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\ItemsModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ItemsModel.edmx</DependentUpon>
+      <LastGenOutput>ItemsModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -211,6 +240,13 @@
     </EntityDeploy>
     <Content Include="Models\CoffeeShopDBModel.edmx.diagram">
       <DependentUpon>CoffeeShopDBModel.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\ItemsModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ItemsModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ItemsModel.edmx.diagram">
+      <DependentUpon>ItemsModel.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\JavaScript.js" />
@@ -240,6 +276,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Registration.cshtml" />
     <Content Include="Views\Home\Summary.cshtml" />
+    <Content Include="Views\Items\Create.cshtml" />
+    <Content Include="Views\Items\Delete.cshtml" />
+    <Content Include="Views\Items\Details.cshtml" />
+    <Content Include="Views\Items\Edit.cshtml" />
+    <Content Include="Views\Items\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

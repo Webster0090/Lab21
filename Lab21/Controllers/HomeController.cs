@@ -11,6 +11,10 @@ namespace Lab21.Controllers
     {
         public ActionResult Index()
         {
+            CoffeeShopDBEntities2 ORM = new CoffeeShopDBEntities2();
+            ViewBag.Test = ORM.Items.ToList<Item>();
+
+
             return View();
         }
 
