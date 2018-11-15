@@ -54,5 +54,38 @@ namespace Lab21.Controllers
                 return View("Error");
             }
         }
+        public ActionResult AddItem()
+        {
+            return View();
+        }
+
+        public ActionResult FindItem(string name)
+        {
+            CoffeeShopDBEntities2 ORM = new CoffeeShopDBEntities2();
+            //find item
+            Item ItemToEdit = ORM.Items.Find(name);
+
+            if (ItemToEdit == null)
+            {
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.ItemToEdit = ItemToEdit;
+            return View();
+
+        }
+        public ActionResult DeleteItem(string name)
+        {
+            CoffeeShopDBEntities2 ORM = new CoffeeShopDBEntities2();
+
+            Item ItemToDelete = ORM.Items.Find(name); 
+            
+            ORM.Items.Remove(ItemToDelete);
+
+            
+            ORM.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }
